@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Shopper Online</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+      header {
+        background-color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+      header img {
+        max-width: 150px;
+      }
+      .hero {
+        background-image: url("hero.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 200px 20px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+      .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .service-card {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+        flex: 0 0 300px;
+        text-align: center;
+      }
+      .about {
+        padding: 20px;
+        text-align: center;
+      }
+      .contact {
+        padding: 20px;
+        background-color: #fff;
+        text-align: center;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        .services {
+          flex-direction: column;
+          align-items: center;
+        }
+        .service-card {
+          flex: 0 0 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo" />
+    </header>
+    <section class="hero">
+      <h1>Transforma tu imagen con nuestro servicio de Personal Shopper</h1>
+    </section>
+    <section class="services">
+      <div class="service-card">
+        <h2>Paquete Básico</h2>
+        <p>Descripción del paquete básico...</p>
+      </div>
+      <div class="service-card">
+        <h2>Paquete Intermedio</h2>
+        <p>Descripción del paquete intermedio...</p>
+      </div>
+      <div class="service-card">
+        <h2>Paquete Premium</h2>
+        <p>Descripción del paquete premium...</p>
+      </div>
+    </section>
+    <section class="about">
+      <h2>Sobre mí</h2>
+      <p>Explicación sobre quién eres y tu experiencia...</p>
+    </section>
+    <section class="contact">
+      <h2>Contacto</h2>
+      <p>Formulario de contacto o información...</p>
+    </section>
+    <footer>
+      <p>&copy; 2025 Personal Shopper Online. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
