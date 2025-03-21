@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Shopper Online</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Paula Carranza Personal Shopper</title>
     <style>
       body {
         font-family: sans-serif;
@@ -48,7 +52,7 @@
       }
       header img {
         max-width: 150px;
-        padding-top: 5px;
+        padding-top: 10px;
       }
       .hero {
         background-image: url("hero.jpg");
@@ -108,13 +112,6 @@
       .btn-cta-whatsapp:hover {
         background-color: #1ebe57;
       }
-      .btn-cta:active {
-        background-color: #666; /* Color aún más oscuro al hacer clic */
-        transform: scale(1); /* Vuelve al tamaño original */
-      }
-      .btn-cta-whatsapp:active {
-        background-color: #128c7e;
-      }
       .services {
         background-color: #f7f7f7;
         display: flex;
@@ -157,6 +154,7 @@
         color: white;
         padding: 10px 0;
         text-align: center;
+        font-size: 0.75rem;
       }
       @media (max-width: 600px) {
         .services {
@@ -168,6 +166,12 @@
         }
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = currentYear;
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -291,7 +295,10 @@
       </div>
     </section>
     <footer>
-      <p>&copy; 2025 Paula Carranza. Todos los derechos reservados.</p>
+      <p>
+        &copy; <span id="year"></span> Paula Carranza. Todos los derechos
+        reservados.
+      </p>
     </footer>
   </body>
 </html>
