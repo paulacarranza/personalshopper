@@ -9,6 +9,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <title>Paula Carranza Personal Shopper</title>
+    <meta
+      name="description"
+      content="¿Buscas un personal shopper en España? Transforma tu estilo con mis servicios personalizados de asesoría de moda e imagen. ¡Agenda hoy mismo!"
+    />
     <style>
       body {
         font-family: sans-serif;
@@ -26,9 +30,15 @@
       li {
         margin-bottom: 5px; /* Opcional: Añade un pequeño espacio entre los elementos */
       }
+      .service-tools {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .price {
-        font-weight: 800;
-        font-size: 2rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding-top: 2rem;
       }
       .check,
       .cross {
@@ -113,20 +123,41 @@
       .btn-cta-whatsapp:hover {
         background-color: #1ebe57;
       }
+      .btn-buy {
+        background-color: #ff0066;
+        align-items: center;
+        display: inline-block;
+        color: white; /* Color del texto */
+        padding: 10px 20px;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px; /* Esquinas redondeadas */
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
+        cursor: pointer;
+        margin-top: 20px; /* Espaciado entre el h1 y el botón */
+      }
+      .btn-buy:hover {
+        background-color: #ff48b6;
+        transform: scale(1.05);
+      }
       .services {
         background-color: #f7f7f7;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 20px;
+        padding: 7rem;
       }
       .service-card {
         background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         margin: 10px;
         padding: 20px;
         flex: 0 0 300px;
         text-align: center;
+        border-radius: 1.5rem;
       }
       .about {
         background-color: #fff;
@@ -148,7 +179,7 @@
       }
       .wrap-container {
         max-width: 700px;
-        padding: 50px 0;
+        padding: 6rem 0;
       }
       footer {
         background-color: #333;
@@ -157,13 +188,12 @@
         text-align: center;
         font-size: 0.75rem;
       }
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         .services {
-          flex-direction: column;
-          align-items: center;
+          padding: 3rem;
         }
-        .service-card {
-          flex: 0 0 100%;
+        .wrap-container {
+          padding: 2rem 0;
         }
       }
     </style>
@@ -173,18 +203,33 @@
         document.getElementById("year").textContent = currentYear;
       });
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Personal Shopper en España",
+        "description": "Servicios de asesoría de imagen y moda para eventos especiales.",
+        "provider": {
+          "@type": "Person",
+          "name": "Paula Carranza"
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
-      <img src="logo.png" alt="Logo" />
+      <img
+        src="logo.png"
+        alt="Paula Carranza Personal Shopper - Asesoría de moda"
+      />
     </header>
     <section class="hero">
       <div class="wrap-container">
         <h1>
           Descubre el poder de una asesoría personalizada que habla por ti
           <span
-            >con mis servicios de personal shopper<br />para eventos y ocasiones
-            especiales</span
+            >con mis servicios de personal shopper<br />para eventos, fiestas y
+            ocasiones especiales</span
           >
         </h1>
         <a href="#services" class="btn-cta">¡Quiero saber más!</a>
@@ -199,7 +244,10 @@
           <li><span class="cross">✘</span> Acompañamiento en compras</li>
           <li><span class="cross">✘</span> Revisión de armario</li>
         </ul>
-        <p><span class="price">49€</span></p>
+        <div class="service-tools">
+          <span class="price">79€</span>
+          <a href="#contact" class="btn-buy">Comprar</a>
+        </div>
       </div>
       <div class="service-card">
         <h2>Intermedio</h2>
@@ -213,7 +261,10 @@
           </li>
           <li><span class="cross">✘</span> Revisión de armario</li>
         </ul>
-        <p><span class="price">99€</span></p>
+        <div class="service-tools">
+          <span class="price">159€</span>
+          <a href="#contact" class="btn-buy">Comprar</a>
+        </div>
       </div>
       <div class="service-card">
         <h2>Premium</h2>
@@ -225,18 +276,21 @@
           <li><span class="check">✔</span> Acompañamiento en compras</li>
           <li><span class="check">✔</span> Revisión completa de armario</li>
         </ul>
-        <p><span class="price">199€</span></p>
+        <div class="service-tools">
+          <span class="price">259€</span>
+          <a href="#contact" class="btn-buy">Comprar</a>
+        </div>
       </div>
     </section>
     <section class="about">
       <div class="wrap-container">
         <h2>Sobre mí</h2>
         <p>
-          Soy una apasionada de la moda y la asesoría de imagen, con un firme
-          compromiso por ayudar a las personas a descubrir y definir su estilo
-          único. Mi mayor satisfacción es ver cómo mis clientas brillan al
-          adaptar su imagen a cada ocasión, reflejando confianza, elegancia y
-          autenticidad.
+          Soy una apasionada de la moda, el shopping y la asesoría de imagen,
+          con un firme compromiso por ayudar a las personas a descubrir y
+          definir su estilo único. Mi mayor satisfacción es ver cómo mis
+          clientas brillan al adaptar su imagen a cada ocasión, reflejando
+          confianza, elegancia y autenticidad.
         </p>
         <p>
           Creo que cada detalle cuenta, y me encanta trabajar mano a mano para
@@ -244,10 +298,12 @@
           historia y expresen quiénes somos.
         </p>
         <p>
-          Estos años he compartido algunas propuestas para eventos de todo tipo;
-          bautizos, comuniones, bodas, cenas de empresa... Y lo hago a traves de
-          mis cuentas de Instagram y TikTok. Adjunto los enlaces para que puedas
-          seguirme e inspirarte con mis creacciones.
+          Llevo muchos años trabajando duramente para convertirme en la mejor
+          personal shopper de España, y, a lo largo de este tiempo, he
+          compartido algunas propuestas, para eventos de todo tipo (bautizos,
+          comuniones, bodas, cenas de empresa...), a traves de mis cuentas de
+          Instagram y TikTok. Adjunto los enlaces para que puedas seguirme e
+          inspirarte con mis creacciones.
         </p>
         <p>
           <a
@@ -265,7 +321,7 @@
         </p>
       </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="wrap-container">
         <h2>Contacto</h2>
         <p>
@@ -276,8 +332,8 @@
         <p>
           Te recuerdo que trabajo de forma <b>online</b>, pero si lo deseas
           también puedo ofrecerte mis servicios de forma <b>presencial</b> el
-          Valladolid, España. Pero podemos hablar cualquier posibilidad de
-          desplazamiento.
+          Valladolid, España. Tambíen podemos hablar sobre la posibilidad de
+          visitarte en tu ciudad.
         </p>
         <p>
           Si tienes dudas, necesitas asesoría o quieres contratar cualquiera de
