@@ -19,7 +19,8 @@
         margin: 0;
         padding: 0;
         background-color: #fff;
-        line-height: 1.7rem;
+        line-height: 2.5rem;
+        font-weight: 100;
       }
       ul {
         list-style: none; /* Quita los puntos del ul y li */
@@ -29,16 +30,6 @@
       }
       li {
         margin-bottom: 5px; /* Opcional: Añade un pequeño espacio entre los elementos */
-      }
-      .service-tools {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .price {
-        font-weight: 600;
-        font-size: 1.2rem;
-        padding-top: 2rem;
       }
       .check,
       .cross {
@@ -57,7 +48,7 @@
         font-weight: bold; /* Opcional para resaltar */
       }
       header {
-        background-color: #fff;
+        background-color: #ffffff;
         padding: 10px 0;
         text-align: center;
       }
@@ -84,12 +75,23 @@
         margin: 0;
         line-height: 3rem;
       }
-      .hero h1 span {
-        display: block;
+      .hero h1 .h1-add {
         font-size: 1rem;
         font-weight: 100;
-        padding-top: 1rem;
-        line-height: 1.2rem;
+        line-height: 1.4rem;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 1rem;
+      }
+      .h1-container {
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 2rem;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+      }
+      .pink-text {
+        color: #ff0066;
+        display: inline-block;
       }
       .btn-cta {
         display: inline-block;
@@ -123,6 +125,13 @@
       .btn-cta-whatsapp:hover {
         background-color: #1ebe57;
       }
+      .btn-cta-pink {
+        background-color: #ff0066;
+      }
+      .btn-cta-pink:hover {
+        background-color: #ff48b6;
+        transform: scale(1.05);
+      }
       .btn-buy {
         background-color: #ff0066;
         align-items: center;
@@ -143,21 +152,78 @@
         background-color: #ff48b6;
         transform: scale(1.05);
       }
-      .services {
+      .full-services {
         background-color: #f7f7f7;
+        padding: 0 20px 7rem 20px;
+        text-align: center;
+      }
+      .service-tools {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .services {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 7rem;
       }
       .service-card {
-        background-color: #fff;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         margin: 10px;
         padding: 20px;
         flex: 0 0 300px;
         text-align: center;
         border-radius: 1.5rem;
+      }
+      .service-card p {
+        line-height: 1.2rem;
+        min-height: 150px;
+        font-size: 0.9rem;
+      }
+      .service-card h3 {
+        font-weight: 100;
+        font-size: 2rem;
+        margin: 1rem;
+        font-style: italic;
+      }
+      .service-card .price {
+        font-weight: 600;
+        font-size: 1.6rem;
+      }
+      .card-green {
+        border: 1px solid #007d1d;
+        background-color: #d3ffdd;
+        color: #007d1d;
+      }
+      .btn-green {
+        background-color: #007d1d;
+      }
+      .btn-green:hover {
+        background-color: #00cc30;
+        transform: scale(1.05);
+      }
+      .card-blue {
+        border: 1px solid #0088ff;
+        background-color: #e5f9ff;
+        color: #00347d;
+      }
+      .btn-blue {
+        background-color: #00347d;
+      }
+      .btn-blue:hover {
+        background-color: #0054c9;
+        transform: scale(1.05);
+      }
+      .card-pink {
+        border: 1px solid #ff0066;
+        background-color: #ffdfec;
+        color: #ff0066;
+      }
+      .btn-pink {
+        background-color: #ff0066;
+      }
+      .btn-pink:hover {
+        background-color: #ff48b6;
+        transform: scale(1.05);
       }
       .about {
         background-color: #fff;
@@ -180,6 +246,22 @@
       .wrap-container {
         max-width: 700px;
         padding: 6rem 0;
+        margin: 0 auto;
+      }
+      .wrap-container-xl {
+        max-width: 1000px;
+        padding: 6rem 0;
+        margin: 0 auto;
+      }
+      .wrap-container p,
+      .wrap-container-xl p {
+        font-size: 1.1rem;
+      }
+      .step {
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        padding: 2rem;
       }
       footer {
         background-color: #333;
@@ -224,67 +306,92 @@
       />
     </header>
     <section class="hero">
-      <div class="wrap-container">
+      <div
+        class="wrap-container h1-container"
+        style="padding-left: 1rem; padding-right: 1rem"
+      >
         <h1>
           Descubre el poder de una asesoría personalizada que habla por ti
-          <span
-            >con mis servicios de personal shopper<br />para eventos, fiestas y
-            ocasiones especiales</span
-          >
+          <br />
+          <span class="h1-add">
+            con mis servicios de personal shopper para
+            <span class="pink-text">
+              eventos, fiestas y ocasiones especiales
+            </span>
+          </span>
         </h1>
-        <a href="#services" class="btn-cta">¡Quiero saber más!</a>
+        <a href="#full-services" class="btn-cta btn-cta-pink"
+          >¡Quiero saber más!</a
+        >
       </div>
     </section>
-    <section id="services" class="services">
-      <div class="service-card">
-        <h2>Básico</h2>
-        <ul>
-          <li><span class="check">✔</span> Análisis de estilo personal</li>
-          <li><span class="check">✔</span> Sugerencias de looks básicos</li>
-          <li><span class="cross">✘</span> Acompañamiento en compras</li>
-          <li><span class="cross">✘</span> Revisión de armario</li>
-        </ul>
-        <div class="service-tools">
-          <span class="price">79€</span>
-          <a href="#contact" class="btn-buy">Comprar</a>
-        </div>
+    <section id="full-services" class="full-services">
+      <div class="wrap-container-xl" style="padding-bottom: 2rem">
+        <h2>MIS ASESORÍAS</h2>
+        <p>¿Qué incluyen?</p>
+        <p class="step">
+          Un <b>cuestionario inicial</b> para conocer tus preferencias, el tipo
+          de evento al que asistirás y cualquier detalle relevante que ayude a
+          definir la mejor estrategia de imagen.
+        </p>
+        <p class="step">
+          <b>Análisis minucioso de tu armario</b>, evaluando aquellas prendas y
+          accesorios que deseas reutilizar.
+        </p>
+        <p class="step">
+          Finalmente, recibirás un <b>dosier de asesoría</b> con imágenes
+          inspiradoras, referencias y enlaces a tiendas donde podrás encontrar
+          las piezas recomendadas. Además, contarás con una guía detallada con
+          consejos adaptados a tu evento.
+        </p>
       </div>
-      <div class="service-card">
-        <h2>Intermedio</h2>
-        <ul>
-          <li><span class="check">✔</span> Análisis de estilo personal</li>
-          <li>
-            <span class="check">✔</span> Sugerencias de looks personalizados
-          </li>
-          <li>
-            <span class="check">✔</span> Acompañamiento en compras (1 hora)
-          </li>
-          <li><span class="cross">✘</span> Revisión de armario</li>
-        </ul>
-        <div class="service-tools">
-          <span class="price">159€</span>
-          <a href="#contact" class="btn-buy">Comprar</a>
+      <div class="services">
+        <div class="service-card card-green">
+          <h3>EXPRESS</h3>
+          <p>
+            Has elegido tu ropa, pero te surgen dudas sobre qué
+            <b>complementos</b>
+            usar para darle el toque final. En esta asesoría, te ayudo a
+            seleccionar los accesorios perfectos para potenciar tu estilo y
+            hacer que tu look brille con armonía.
+          </p>
+          <div class="service-tools">
+            <span class="price">49€</span>
+            <a href="#contact" class="btn-buy btn-green">Comprar</a>
+          </div>
         </div>
-      </div>
-      <div class="service-card">
-        <h2>Premium</h2>
-        <ul>
-          <li><span class="check">✔</span> Análisis de estilo personal</li>
-          <li>
-            <span class="check">✔</span> Sugerencias de looks personalizados
-          </li>
-          <li><span class="check">✔</span> Acompañamiento en compras</li>
-          <li><span class="check">✔</span> Revisión completa de armario</li>
-        </ul>
-        <div class="service-tools">
-          <span class="price">259€</span>
-          <a href="#contact" class="btn-buy">Comprar</a>
+        <div class="service-card card-blue">
+          <h3>BÁSICA</h3>
+          <p>
+            No tienes nada decidido, ni ropa ni complementos, y necesitas
+            orientación. Te propongo <b>un look completo</b>, adaptado a tu
+            estilo, ocasión y preferencias, para que puedas lucir impecable y
+            sentirte seguro con tu elección.
+          </p>
+          <div class="service-tools">
+            <span class="price">99€</span>
+            <a href="#contact" class="btn-buy btn-blue">Comprar</a>
+          </div>
+        </div>
+        <div class="service-card card-pink">
+          <h3>PREMIUM</h3>
+          <p>
+            Si buscas una experiencia más completa, esta asesoría te ofrece
+            <b>tres looks personalizados</b> diseñados especialmente para ti.
+            Además, te enseño cómo reutilizar las prendas y accesorios para que
+            puedas sacarles el máximo partido, creando nuevas combinaciones sin
+            esfuerzo.
+          </p>
+          <div class="service-tools">
+            <span class="price">149€</span>
+            <a href="#contact" class="btn-buy btn-pink">Comprar</a>
+          </div>
         </div>
       </div>
     </section>
     <section class="about">
       <div class="wrap-container">
-        <h2>Sobre mí</h2>
+        <h2>SOBRE MÍ</h2>
         <p>
           Soy una apasionada de la moda, el shopping y la asesoría de imagen,
           con un firme compromiso por ayudar a las personas a descubrir y
@@ -323,18 +430,13 @@
     </section>
     <section id="contact" class="contact">
       <div class="wrap-container">
-        <h2>Contacto</h2>
+        <h2>CONTACTO</h2>
         <p>
           <b>¿Lista para transformar tu estilo?</b> Explora nuestros exclusivos
           paquetes de Personal Shopper diseñados para realzar tu imagen y
           confianza en cada ocasión especial.
         </p>
-        <p>
-          Te recuerdo que trabajo de forma <b>online</b>, pero si lo deseas
-          también puedo ofrecerte mis servicios de forma <b>presencial</b> el
-          Valladolid, España. Tambíen podemos hablar sobre la posibilidad de
-          visitarte en tu ciudad.
-        </p>
+        <p>Te recuerdo que trabajo <b>100% online</b>, para toda España.</p>
         <p>
           Si tienes dudas, necesitas asesoría o quieres contratar cualquiera de
           nuestros paquetes, ¡estoy aquí para ayudarte! Simplemente
