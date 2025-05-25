@@ -108,12 +108,12 @@
         cursor: pointer;
         margin-top: 20px; /* Espaciado entre el h1 y el botón */
       }
-      .btn-cta-whatsapp {
-        background-color: #25d366;
+      .btn-cta-dialog {
+        background-color: #ff0066;
         display: inline-flex;
         align-items: center;
       }
-      .btn-cta-whatsapp img.icon {
+      .btn-cta-dialog img.icon {
         width: 20px; /* Tamaño del icono */
         height: 20px;
         margin-right: 5px; /* Espaciado entre el icono y el texto */
@@ -122,8 +122,8 @@
         background-color: #444444; /* Color más oscuro al pasar el ratón */
         transform: scale(1.05); /* Efecto de "zoom" */
       }
-      .btn-cta-whatsapp:hover {
-        background-color: #1ebe57;
+      .btn-cta-dialog:hover {
+        background-color: #ff48b6;
       }
       .btn-cta-pink {
         background-color: #ff0066;
@@ -439,11 +439,17 @@
         <p>Te recuerdo que trabajo <b>100% online</b>, para toda España.</p>
         <p>
           Si tienes dudas, necesitas asesoría o quieres contratar cualquiera de
-          nuestros paquetes, ¡estoy aquí para ayudarte! Simplemente contacta
-          conmigo al email:
-          <b>paulacarranza.ps@hotmail.com</b>
+          nuestros paquetes, ¡estoy aquí para ayudarte! Simplemente
+          <b>haz clic en el botón</b> a continuación y contacta conmigo.
         </p>
-        <p></p>
+        <p>
+          <a
+            href="mailto:paulacarranza.ps@hotmail.com"
+            target="_blank"
+            class="btn-cta btn-cta-dialog"
+            ><img src="dialog.png" alt="Main" class="icon" />¡Hablemos!</a
+          >
+        </p>
       </div>
     </section>
     <footer>
